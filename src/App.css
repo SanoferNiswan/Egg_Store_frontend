@@ -1,0 +1,98 @@
+
+/* Importing a professional font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Apply the font globally */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-color: #f4f4f4; */
+  /* background-image: url('../public/eggBG.jpg');  */
+  background-size: cover;
+  color: #333;
+  width: 100%;
+  height : 100vh;
+
+}
+
+/* Background for the main container */
+.bg {
+  background-image: url('https://www.example.com/path-to-your-background-image.jpg'); /* Replace with your background image URL */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.bg1 {
+  /* background-image: url('https://t3.ftcdn.net/jpg/09/17/00/50/360_F_917005003_k6NUO7e06ObOT3H9Klb7FEh0Xqn6ZwYe.jpg'); */
+   /* Replace with your background image URL */
+  /* background-color: rgb(253, 230, 255);  */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Centering the form container */
+form {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #3f51b5; /* Material UI secondary color */
+}
+
+/* Styling the button */
+button {
+  background-color: #ffdf8d; /* Material UI secondary color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e9df9f;
+}
+
+/* Footer styles */
+footer {
+  background-color: #3f51b5;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Ensure the footer stays at the bottom */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.bg {
+  flex: 1;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+/* General Styles */
+/* General Styles */

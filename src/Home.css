@@ -1,0 +1,184 @@
+/* General Page Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff; /* White background */
+  color: #333;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffffff; /* White background for main content */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff; /* White background */
+  color: #6a0dad; /* Purple theme for text */
+}
+
+.logo {
+  height: 50px;
+}
+
+.searchBarContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.searchBar {
+  padding: 10px 40px 10px 15px; /* Adjust padding to make room for the icon */
+  width: 300px;
+  border-radius: 20px;
+  border: 1px solid gray; /* Purple border */
+  background-color: transparent; /* Transparent background */
+  color: #6a0dad; /* Purple text */
+}
+
+.searchBar::placeholder {
+  color: #6a0dad; /* Purple placeholder text */
+}
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  right: 15px; /* Position the icon inside the input field */
+  transform: translateY(-50%);
+  color: #6a0dad; /* Purple color for the icon */
+  font-size: 18px;
+  pointer-events: none; /* Prevent the icon from interfering with input focus/clicks */
+}
+
+.searchBar:focus {
+  transition: 0.3s;
+  border-color: #6a0dad; /* Purple border on focus */
+  outline: none; /* Remove the default outline */
+}
+
+.customerList {
+  flex: 1;
+  height: 100%;
+  padding: 30px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 80px;
+  background-color: #fff;
+}
+
+.customerItem {
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f0f0f5;
+  display: grid;
+  grid-template-areas:
+      "name transactions"
+      "details trash";
+  grid-template-columns: 1fr auto;
+  grid-gap: 10px;
+}
+
+.customerItem h3 {
+  grid-area: name;
+  margin: 0;
+  justify-self: start;
+  color: #6a0dad; /* Purple theme for h3 */
+}
+
+.customerItem h5 {
+  grid-area: details;
+  margin: 0;
+  justify-self: start;
+  color: #3b0c5c; /* Purple theme for h5 */
+}
+
+.customerItem .editButton {
+  grid-area: transactions;
+  justify-self: end;
+}
+
+.customerItem .trash {
+  grid-area: trash;
+  justify-self: end;
+  color: #000; /* Initial black color */
+  cursor: pointer;
+  font-size: 18px;
+  border: none;
+  outline: none;
+}
+
+.customerItem .trash:hover {
+  color: #ff4d4d; /* Red color on hover */
+}
+
+.customerItem .trash:focus {
+  outline: none; /* No border on focus */
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background-color: transparent; /* Invisible background */
+  color: #6a0dad; /* Purple theme for text */
+}
+
+/* Popup Styles */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupContent {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 400px;
+}
+
+.popupContent h3 {
+  margin-bottom: 15px;
+  color: #6a0dad; /* Purple theme */
+}
+
+.popupContent input {
+  padding: 10px;
+  width: calc(100% - 22px); /* Ensure full width with padding */
+  margin-bottom: 15px;
+  border-radius: 15px;
+  border: 1px solid #6a0dad; /* Default purple border */
+  background-color: transparent; /* Transparent background */
+  color: #6a0dad; /* Purple text */
+}
+
+.popupContent input:focus {
+  transition: 0.3s;
+  border-color: #6a0dad; /* Purple border on focus */
+  outline: none; /* Remove the default outline */
+}
+
+.popupContent .buttonRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.no-customers {
+  text-align: center;
+  font-size: 18px;
+  color: #6a0dad; /* Purple color for the message */
+  padding: 20px;
+}

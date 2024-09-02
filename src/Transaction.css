@@ -1,0 +1,261 @@
+.addButton {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #f0e5c9; 
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+
+  /* popup code */
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popupContent {
+    background-color: #fff;
+    padding: 20px;
+    width: 70%;
+    max-height: 80%;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .popupContent h3 {
+    margin-bottom: 15px;
+  }
+  
+  .popupContent input {
+    padding: 10px;
+    /* width: 80%; */
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+  }
+  
+  .popupContent button {
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+
+  .customerItem {
+    position: relative; /* Make the container relative for absolute positioning of buttons */
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f9f9f9; /* Add a background color for better visibility */
+  }
+  
+  .shopName {
+    flex-grow: 1; /* Allow shopName to take up remaining space */
+  }
+  
+  .editButton, .deleteButton {
+    position: absolute; /* Position buttons absolutely within the customerItem */
+    right: 70px; /* Right edge distance */
+  }
+  
+  .editButton {
+    background-color: blue; /* Add your preferred color */
+    color: white;
+    width: 100px;
+    height: 30px;
+    /* z-index: 1; Ensure it's behind the delete button */
+  }
+  
+  .deleteButton {
+    background-color: rgb(168, 161, 161);
+    color: white;
+    width: 7px;
+    height: 30px;
+    border-radius: 50%;
+    right: 10px; 
+  }
+  
+  .editButton:hover, .deleteButton:hover {
+    opacity: 0.8; /* Optional: Add hover effect */
+  }
+
+  .deleteButton:hover{
+    background-color: red;
+  }
+  
+  /* CSS for Popup Modal */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.modal-content {
+  background-color: white;
+  width: 70%;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Specific Modal Styles */
+.modal-content {
+  width: 70%;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin: 10px;
+  align-items: center;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  /* background-color: #f4e1ff; Light purple background for the container */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff; 
+  border-radius: 8px;
+  overflow: hidden;
+  margin-left: 0;
+  margin-right: 2%;
+}
+
+.table-container th,
+.table-container td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* Light border for separation */
+  color: #6a0dad; /* Purple color for text */
+}
+
+.table-container th {
+  background-color: #e0b3ff; /* Slightly darker purple for table headers */
+  font-weight: bold;
+}
+
+.table-container tr:hover {
+  background-color: #f0dfff; /* Light purple hover effect */
+}
+
+.no-transactions {
+  padding: 20px;
+  font-size: 18px;
+  color: #6a0dad; /* Purple color for text */
+}
+
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 70%;
+    max-height: 80%;
+    overflow-y: auto;
+    position: relative;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff; /* White background for navbar */
+    margin: 0;
+  }
+  
+  .logo {
+    max-height: 50px;
+  }
+  
+  .nav-links {
+    margin-left: auto; /* Pushes the links to the right */
+  }
+  
+  .navlink {
+    color: #6a0dad; /* Purple color for nav items */
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+  }
+  
+  .navlink:hover {
+    background-color: #f0f0f0; /* Light background color on hover */
+    border-radius: 5px; /* Optional: add border radius for rounded corners */
+    padding: 5px 10px; /* Optional: add padding to make the hover effect more noticeable */
+  }
+
+  .head{
+    /* margin-left: 200%; */
+    color: #6a0dad;
+  }
+  
+  
