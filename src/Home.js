@@ -35,7 +35,7 @@ const Home = () => {
 
 const fetchCustomers = async () => {
   try {
-      const response = await axios.get('http://localhost:8080/getcustomers');
+      const response = await axios.get('https://egg-store-backend.onrender.com/getcustomers');
       setCustomers(response.data.data);
   } catch (error) {
       console.error('Error fetching customers:', error);
@@ -63,8 +63,8 @@ const fetchCustomers = async () => {
     console.log('Saving Customer:', newCustomer); // Check the data before sending
   
     try {
-      const response = await axios.post('http://localhost:8080/savecustomer', newCustomer);
-      const settlementResponse = await axios.post('http://localhost:8080/savesettlement',newSettlement);
+      const response = await axios.post('http://https://egg-store-backend.onrender.com/savecustomer', newCustomer);
+      const settlementResponse = await axios.post('https://egg-store-backend.onrender.com/savesettlement',newSettlement);
       setCustomers([...customers, response.data.data]);
       setShowPopup(false);
       setCustomerDetails({ ShopName: '', CustomerName: '', ShopAddress: '', Mobile: '' });
@@ -82,7 +82,7 @@ const fetchCustomers = async () => {
   const handleDeleteClick = async (id) => {
     debugger;
     try {
-      await axios.delete(`http://localhost:8080/delete/${id}`);
+      await axios.delete(`https://egg-store-backend.onrender.com/delete/${id}`);
       setCustomers(customers.filter(customer => customer._id !== id));
       fetchCustomers();
     } catch (error) {
