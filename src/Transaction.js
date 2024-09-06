@@ -9,7 +9,8 @@ import axios from "axios";
 import { Select, MenuItem, FormControl, InputLabel } from '@mui/material';
 import { Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material";
 
-axios.defaults.baseURL = "https://egg-store-backend.onrender.com/";
+// axios.defaults.baseURL = "https://egg-store-backend.onrender.com/";
+axios.defaults.baseURL = process.env.REACT_APP_BACKEND_URL;
 
 const Transaction = () => {
   const [shopName,setShopName] = useState("");
