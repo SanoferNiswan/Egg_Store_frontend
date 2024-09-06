@@ -137,29 +137,6 @@ const fetchSettlement = async () => {
     }));
   };
 
-  // const handleSubmit = async (event) => {
-  //   event.preventDefault();
-  //   try {
-  //     const data = await axios.post("/savetrans", transactionDetails);
-  //     console.log(data);
-  //     alert("Transaction saved successfully");
-  //     navigate(`/edit/${transactionDetails.CustomerId}`);
-  //     setShowModal(false);
-  //     fetchTransactions();
-  //     setTransactionDetails((prevState) => ({
-  //       ...prevState,
-  //       CustomerId: transactionDetails.CustomerId,
-  //       CustomerName: "",
-  //       ShopName: "",
-  //       ShopAddress: "",
-  //       Mobile: "",
-  //     }));
-  //   } catch (error) {
-  //     console.error("Error saving transaction:", error);
-  //     alert("Failed to save transaction");
-  //   }
-  // };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
