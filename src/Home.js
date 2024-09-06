@@ -63,7 +63,7 @@ const fetchCustomers = async () => {
     console.log('Saving Customer:', newCustomer); // Check the data before sending
   
     try {
-      const response = await axios.post('http://https://egg-store-backend.onrender.com/savecustomer', newCustomer);
+      const response = await axios.post('https://egg-store-backend.onrender.com/savecustomer', newCustomer);
       const settlementResponse = await axios.post('https://egg-store-backend.onrender.com/savesettlement',newSettlement);
       setCustomers([...customers, response.data.data]);
       setShowPopup(false);
